@@ -1,15 +1,29 @@
-//
-//  main.cpp
-//  coreaudio-inspector
-//
-//  Created by Rudolfs Bundulis on 29/06/17.
-//
-//
+#include "audio-object-manager.hpp"
+#include "output.hpp"
 
-#include <iostream>
+#include <cstdlib>
+#include <condition_variable>
+#include <mutex>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+std::mutex Mutex;
+std::condition_variable ConditionVariable;
+
+int main(int argc, const char * argv[])
+{
+    try
+    {
+        CAudioObjectManager AudioObjectManager;
+        std::unique_lock<std::mutex> Lock(Mutex);
+        ConditionVariable.wait(Lock);
+        return EXIT_SUCCESS;
+    }
+    catch(COSStatusException& Exception)
+    {
+        g_Output << Exception;
+        return EXIT_FAILURE;
+    }
+    catch(std::exception& Exception)
+    {
+        return EXIT_FAILURE;
+    }
 }

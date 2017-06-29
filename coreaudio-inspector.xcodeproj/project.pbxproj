@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		39F26BDB1F058F7600703565 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39F26BDA1F058F7600703565 /* main.cpp */; };
+		39F26BE21F058FE100703565 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F26BE11F058FE100703565 /* CoreAudio.framework */; };
+		39F26BE81F0593C900703565 /* audio-object-manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39F26BE61F0593C900703565 /* audio-object-manager.cpp */; settings = {ASSET_TAGS = (); }; };
+		39F26BEB1F0595F500703565 /* audio-object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39F26BE91F0595F500703565 /* audio-object.cpp */; settings = {ASSET_TAGS = (); }; };
+		39F26BEE1F0596A400703565 /* os-status-exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39F26BEC1F0596A400703565 /* os-status-exception.cpp */; settings = {ASSET_TAGS = (); }; };
+		39F26BF11F059C1D00703565 /* audio-device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39F26BEF1F059C1D00703565 /* audio-device.cpp */; settings = {ASSET_TAGS = (); }; };
+		39F26BF41F059F1700703565 /* output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39F26BF21F059F1700703565 /* output.cpp */; settings = {ASSET_TAGS = (); }; };
+		39F26BF61F05A09E00703565 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F26BF51F05A09E00703565 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,19 @@
 /* Begin PBXFileReference section */
 		39F26BD71F058F7600703565 /* coreaudio-inspector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "coreaudio-inspector"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F26BDA1F058F7600703565 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		39F26BE11F058FE100703565 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		39F26BE41F05904200703565 /* audio-object-property.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "audio-object-property.hpp"; sourceTree = "<group>"; };
+		39F26BE61F0593C900703565 /* audio-object-manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "audio-object-manager.cpp"; sourceTree = "<group>"; };
+		39F26BE71F0593C900703565 /* audio-object-manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "audio-object-manager.hpp"; sourceTree = "<group>"; };
+		39F26BE91F0595F500703565 /* audio-object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "audio-object.cpp"; sourceTree = "<group>"; };
+		39F26BEA1F0595F500703565 /* audio-object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "audio-object.hpp"; sourceTree = "<group>"; };
+		39F26BEC1F0596A400703565 /* os-status-exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "os-status-exception.cpp"; sourceTree = "<group>"; };
+		39F26BED1F0596A400703565 /* os-status-exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "os-status-exception.hpp"; sourceTree = "<group>"; };
+		39F26BEF1F059C1D00703565 /* audio-device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "audio-device.cpp"; sourceTree = "<group>"; };
+		39F26BF01F059C1D00703565 /* audio-device.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "audio-device.hpp"; sourceTree = "<group>"; };
+		39F26BF21F059F1700703565 /* output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = output.cpp; sourceTree = "<group>"; };
+		39F26BF31F059F1700703565 /* output.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = output.hpp; sourceTree = "<group>"; };
+		39F26BF51F05A09E00703565 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F26BF61F05A09E00703565 /* CoreFoundation.framework in Frameworks */,
+				39F26BE21F058FE100703565 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +63,8 @@
 		39F26BCE1F058F7600703565 = {
 			isa = PBXGroup;
 			children = (
+				39F26BF51F05A09E00703565 /* CoreFoundation.framework */,
+				39F26BE11F058FE100703565 /* CoreAudio.framework */,
 				39F26BD91F058F7600703565 /* coreaudio-inspector */,
 				39F26BD81F058F7600703565 /* Products */,
 			);
@@ -58,6 +82,17 @@
 			isa = PBXGroup;
 			children = (
 				39F26BDA1F058F7600703565 /* main.cpp */,
+				39F26BE41F05904200703565 /* audio-object-property.hpp */,
+				39F26BE61F0593C900703565 /* audio-object-manager.cpp */,
+				39F26BE71F0593C900703565 /* audio-object-manager.hpp */,
+				39F26BE91F0595F500703565 /* audio-object.cpp */,
+				39F26BEA1F0595F500703565 /* audio-object.hpp */,
+				39F26BEC1F0596A400703565 /* os-status-exception.cpp */,
+				39F26BED1F0596A400703565 /* os-status-exception.hpp */,
+				39F26BEF1F059C1D00703565 /* audio-device.cpp */,
+				39F26BF01F059C1D00703565 /* audio-device.hpp */,
+				39F26BF21F059F1700703565 /* output.cpp */,
+				39F26BF31F059F1700703565 /* output.hpp */,
 			);
 			path = "coreaudio-inspector";
 			sourceTree = "<group>";
@@ -118,6 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				39F26BDB1F058F7600703565 /* main.cpp in Sources */,
+				39F26BEE1F0596A400703565 /* os-status-exception.cpp in Sources */,
+				39F26BF41F059F1700703565 /* output.cpp in Sources */,
+				39F26BE81F0593C900703565 /* audio-object-manager.cpp in Sources */,
+				39F26BEB1F0595F500703565 /* audio-object.cpp in Sources */,
+				39F26BF11F059C1D00703565 /* audio-device.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
